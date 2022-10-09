@@ -51,26 +51,27 @@ if (passwordLength <= 7 || passwordLength >= 129) {
   var useSpecialChars = confirm(
     "Would you like to include special characters in your password?"
   )
-if (useLowercase === false || useUppercase === false || useNumbers === false || useSpecialChars === false){
+  // This will check if all confirms are false. If so it restarts the process
+if (useLowercase === false && useUppercase === false && useNumbers === false && useSpecialChars === false){
   alert( "Please choose at least 1 character type" )
-  return useUppercase()
+  return generatePassword()
 }
   // This creates the potential structure of all the potential characters for the password
   var potentialChars = []
 
-
+// This will concat uppercase letters into the potential chars variable
   if (useUppercase) {
     potentialChars = potentialChars.concat(uppercase);
   }
-
+// This will concat lowercase letters into the potential chars variable
   if (useLowercase) {
     potentialChars = potentialChars.concat(lowercase);
   }
-
+// This will concat numbers into the potential chars variable
   if (useNumbers) {
     potentialChars = potentialChars.concat(numbers);
   }
-
+// This will concat special letters into the potential chars variable
   if (useSpecialChars) {
     potentialChars = potentialChars.concat(special);
   }
