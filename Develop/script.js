@@ -30,9 +30,10 @@ function generatePassword() {
   var passwordLength = prompt(
     "How many characters would you like your password to be? ( Between 8 - 128 characters )"
   )
-if (passwordLength.length < 8 || potentialChars.length > 128) {
+  // If characters chosen is not greater than 8 or less than 128 you receive an alert
+if (passwordLength <= 7 || passwordLength >= 129) {
   alert( "Please choose between 8 - 128 Characters")
-  return passwordLength()
+  return generatePassword()
 }
   // This will ask if the user wants to use uppercase letters in the password
   var useUppercase = confirm(
@@ -50,14 +51,13 @@ if (passwordLength.length < 8 || potentialChars.length > 128) {
   var useSpecialChars = confirm(
     "Would you like to include special characters in your password?"
   )
-
+if (useLowercase === false || useUppercase === false || useNumbers === false || useSpecialChars === false){
+  alert( "Please choose at least 1 character type" )
+  return useUppercase()
+}
   // This creates the potential structure of all the potential characters for the password
   var potentialChars = []
 
-  if (potentialChars.length < 8 || potentialChars.length > 128) {
-    alert('Please choose between 8 - 128 Characters')
-    return
-  }
 
   if (useUppercase) {
     potentialChars = potentialChars.concat(uppercase);
