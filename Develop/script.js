@@ -53,8 +53,8 @@ if (passwordLength <= 7 || passwordLength >= 129) {
   )
   // This will check if all confirms are false. If so it restarts the process
 if (useLowercase === false && useUppercase === false && useNumbers === false && useSpecialChars === false){
-  alert( "Please choose at least 1 character type" )
-  return generatePassword()
+  alert( "Please choose at least 1 unique character type!")
+  return generatePassword();
 }
   // This creates the potential structure of all the potential characters for the password
   var potentialChars = []
