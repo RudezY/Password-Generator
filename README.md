@@ -44,5 +44,8 @@ The following image shows the web application's appearance and functionality:
 
 The Password Generator application displays a red button to generate a password using javascript. The first prompt that will be asked once the button is clicked is the amount of characters you would like in your password (8 - 128 characters). You will also be prompted to choose different characters for the password field, such as, lowercase letters, uppercase letters, numbers, and special characters. When all the prompts are answered the application will generate a password. If the password length chosen is not within the parameters you will be given a prompt notifying you that you must choose a password between the parameters given. If you fail to accept at least one of the 4 parameter choices you will be returned to the beginning of the function to generate a password.
 
+
 Deployed page
 https://rudezy.github.io/Password-Generator/
+
+![HW3 Screenshot](./Assets/images/rudezy-github-io-Password-Generator--1.png)
